@@ -1,0 +1,30 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: comparator.rheocloud.com
+spec:
+  group: rheocloud.com
+  names:
+    kind: Comparator
+    plural: comparators
+    singular: comparator
+  scope: Namespaced
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec:
+            type: object
+            properties:
+              version:
+                type: string
+              playerSlots:
+                type: integer
+              autoStart:
+                type: boolean
+                default: true
+                description: "Automatically activate server on creation"
+    served: true
+    storage: true
