@@ -5,7 +5,7 @@ edition = "2021"
 
 [dependencies]
 kube = { version = "*", features = ["runtime", "derive"] }
-kube-runtime = "0.86.0"
+kube-runtime = "0.98.0"
 tokio = { version = "1.0", features = ["full"] }
 futures = "0.3"
 serde = { version = "1.0", features = ["derive"] }
